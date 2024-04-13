@@ -17,8 +17,7 @@ export const userService = {
         if (user) {
             return `user ${username} exist.`;
         }
-        console.log(password);
-        
+
         const hashedPwd = await bcrypt.hash(password, 10);
         const newUser = await User.create({
             email,

@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { UserPayload, UserRole } from "../utils/types";
 import jwt from "jsonwebtoken";
-import { Auth } from "../models/Auth";
 
 export const requireRole = (role: UserRole) => {
     let roles: UserRole[] = [];

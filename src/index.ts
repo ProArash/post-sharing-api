@@ -7,6 +7,7 @@ mongoose
     .then(async () => {
         console.clear()
         console.log("database connected.");
+        // run server here
         await main();
     })
     .catch((error) => {

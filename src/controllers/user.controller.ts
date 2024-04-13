@@ -4,7 +4,7 @@ import { userService } from "../services/user.service";
 export const userController = {
     register: async (req: Request, res: Response) => {
         try {
-            const { username, name, password, email } = req.body;            
+            const { username, name, password, email } = req.body;
             const user = await userService.register(
                 name,
                 username,
@@ -111,7 +111,7 @@ export const userController = {
             //@ts-ignore
             const fileName = req.user.profile;
             //@ts-ignore
-            const userId = req.user._id;            
+            const userId = req.user._id;
             const upload = await userService.uploadProfile(userId, fileName);
             res.status(200).json({
                 data: upload,
